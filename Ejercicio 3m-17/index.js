@@ -1,17 +1,45 @@
-// Ejercicio 17. Muestra la posición que ocupa cada tenista
-// rankingTenis = ["Djokovic","Alcaraz","Medvedev","Sinner"];
+/* forEach realiza una iteracion con una funcion en cada uno de los elementos del array, su 
+sintaxis es: arr.forEach(function(item, index, array) { }; item=elemento, index=indice, array=array xd
 
-// for (let i = 0; i < rankingTenis.length; i++) {
-//     console.log(`${rankingTenis[i]} ocupa la posición ${i+1}`);
-// }
+    unshift inserta contenido de cualquier tipo de dato al inicio de todo el array
+
+    filter devuelve un nuevo array con todos los elementos encontrados segun la funcion que se le pase (va iterando en cada uno de los elementos del array)
+su sintaxis es results = arr.filter(function(item, index, array) {}); function=asignacion de nombre de funcion, item=elemento, index=indice, array=array
+en la busqueda de cada iteracion dependiendo de la condicion que se asigne en la funcion devolver el nuevo array con todos los elementos que coincidan con esa 
+condicion y si no hay niguna coincidencia devolvera el nuevo array vacio
+
+    slice devuelve un nuevo array de los elementos que determinemos, sintaxis (0, 1) empieza en 0 y termina en el indice antes de ese numero 
+
+    splice es lo mismo que slice pero no devuelve un nuevo array solo lo modifica devolviendo el mismo siguiendo la misma sintaxis pero inciando desde 0 siendo el indice de 
+donde se querra empezar y lo siguiente sera cuantos quiere borrar o si no quiere borrar dejandolo en 0 y depues de eso se puede insertar el dato que querramos 
+
+    find itera en cada uno de los elementos del array en busca de la primera coincidencia que este determinada en la funcion y al encontrar una coincidencia 
+parara la iteracion y mostrara el elemtento que cumple con la condicion, misma sintaxis que filter pero diferente funcionamiento 
+*/
+
+// Ejercicio 17. Muestra la posición que ocupa cada tenista
+// let rankingTenis = ["Djokovic", "Alcaraz", "Medvedev", "Sinner"];
+
+// rankingTenis.forEach((tenista, index) => {
+//     console.log(`Posición ${index + 1}: ${tenista}`); //funcion integrada mediante el backstick
+// });
+
+
+
+/*salida del ejercicio es cada posicion de cada uno de los tenistas empezando por el 
+index base (0) y es incrementado mas uno para empezar por el numero 1 y va agregando 
+el nombre de cada tenista a continuacion 
+*/
 
 // Ejercicio 18: Agrega los meses faltantes del primer semestre
 // let months = ["Enero", "Febrero", "Marzo"];
 
-// months.push('septiembre', 'octumbre', 'noviembre', 'diciembre'); 
+// months.unshift('septiembre', 'octumbre', 'noviembre', 'diciembre'); 
 
 // console.log(months);
-
+/* la salida de este ejercicio es solo agregando la inicio lo que se quiere poner 
+ya sea un string, number o otro tipo de dato 
+*/
 
 // Ejercicio 19: Elimina los números negativos del array
 // let numbers = [10, -5, 8, -3, 7, -1];
@@ -20,41 +48,33 @@
 
 // console.log(positiveNumbers);
 
+//la salida de este ejercicio es el resultado del filter, al si encontrar valores que cumplan con la 
+//condicion que esta asignada esta retornando en el nuevo array esos resultados 
+
 // Ejercicio 20: Verifica si la lista de invitados contiene a "Juan"
 // let invitados = ["Ana", "Carlos", "Luis", "María"]; 
-// invitados.find(invitado => invitado === "Juan") ? 
-// console.log("Juan está en la lista de invitados") : 
-// console.log("Juan no está en la lista de invitados");
-
-// console.log(invitados)
+// let search = invitados.find(invitado => invitado === "Juan")
+// console.log(search)
 
 // Ejercicio 21: Extrae los tres primeros elementos del array de temperaturas
 // let temperaturas = [23, 25, 20, 18, 30, 15];
-
-// let firtsArrays = temperaturas.slice(0, 3)
-
-// console.log(firtsArrays)
+// let firstTemps = temperaturas.slice(0, 3)
+// console.log(firstTemps)
 
 // Ejercicio 22: Reemplaza el elemento "perro" por "gato" en el array de mascotas
 // let mascotas = ["perro", "conejo", "hamster", "loro", "perro"];
-
 // mascotas.splice(0,1, 'gato')
-
 // console.log(mascotas); // ["gato", "conejo", "hamster", "loro", "gato"]
 
 // Ejercicio 23: Encuentra el primer número mayor que 50 en el array
 // let edades = [25, 42, 60, 33, 50];
-
-// let edadMayorQue50 = edades.find(edad => edad > 50);
-
-// console.log(edadMayorQue50)
+// let edadMayor50 = edades.find(edad => edad > 50);
+// console.log(edadMayor50)
 
 // Ejercicio 24: Filtra los números pares del siguiente array
-// let valores = [10, 15, 22, 33, 40, 55];
-
-// let valoresPares = valores.filter(valor => valor % 2 === 0)
-
-// console.log(valoresPares)
+let valores = [10, 15, 22, 33, 40, 55];
+let valoresPares = valores.filter(valor => valor % 2 === 0)
+console.log(valoresPares)
 
 // Ejercicio 25: Muestra cada nombre en mayúsculas
 // let nombres = ["Laura", "Pedro", "Andrés", "Marta"];
@@ -101,7 +121,7 @@
 
 // Considerando el siguiente Array base
 // Resolver los siguientes:
-let nums = [2, 4, 0, 8, 10];
+// let nums = [2, 4, 0, 8, 10];
 // 31. Agrega el número 12 al final del array.
 // nums.push(12)
 // console.log(nums)
@@ -115,7 +135,7 @@ let nums = [2, 4, 0, 8, 10];
 // let position = nums.indexOf(8)
 // console.log(position)
 // 35. Verifica si el número 4 está en el array.
-console.log(nums.includes(4))
+// console.log(nums.includes(4))
 // 36. Crea una copia del array desde la posición 1 hasta 3 (sin incluir el índice 3).
 // let copy = nums.slice(1, 3)
 // console.log(copy)
@@ -134,5 +154,5 @@ console.log(nums.includes(4))
 // let doble = nums.map( n => n * 2)
 // console.log(doble)
 // 42. Combina el array con otro array [20, 30].
-let concated = nums.concat([20, 30])
-console.log(concated)
+// let concated = nums.concat([20, 30])
+// console.log(concated)
