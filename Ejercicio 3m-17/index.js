@@ -72,56 +72,44 @@ ya sea un string, number o otro tipo de dato
 // console.log(edadMayor50)
 
 // Ejercicio 24: Filtra los números pares del siguiente array
-let valores = [10, 15, 22, 33, 40, 55];
-let valoresPares = valores.filter(valor => valor % 2 === 0)
-console.log(valoresPares)
+// let valores = [10, 15, 22, 33, 40, 55];
+// let valoresPares = valores.filter(valor => valor % 2 === 0)
+// console.log(valoresPares)
 
 // Ejercicio 25: Muestra cada nombre en mayúsculas
 // let nombres = ["Laura", "Pedro", "Andrés", "Marta"];
-
 // let namesWithUpper = nombres.map(nombre => nombre.toUpperCase())
-
 // console.log(namesWithUpper)
 
 // Ejercicio 26: Crea un nuevo array con cada número multiplicado por 3
 // let numeros = [1, 2, 3, 4, 5];
-
 // let newArr = numeros.map( n => n * 3)
-
 // console.log(newArr)
 
 // Ejercicio 27: Combina los siguientes arrays de productos electrónicos
 // let electronicos1 = ["Laptop", "Tablet"];
 // let electronicos2 = ["Smartphone", "Smartwatch"];
-
 // let newArr = electronicos1.concat(electronicos2)
-
 // console.log(newArr)
 
 // Ejercicio 28: Elimina el primer elemento del array de vehículos
 // let vehiculos = ["Carro", "Moto", "Bicicleta"];
-
 // vehiculos.shift()
-
 // console.log(vehiculos)
 
 // Ejercicio 29: Encuentra la posición de "Manzana" en el array de frutas
 // let frutas = ["Pera", "Banana", "Manzana", "Uva"];
-
 // let position = frutas.indexOf('Manzana')
-
 // console.log('esta en la posicion ' + position)
 
 // Ejercicio 30: Verifica si el array contiene el número 100
 // let valoresNumericos = [50, 75, 100, 125];
-
-// let buscar=valoresNumericos.indexOf(100)
-
+// let buscar=valoresNumericos.find(buscar => buscar ===100)
 // console.log(buscar)
 
 // Considerando el siguiente Array base
 // Resolver los siguientes:
-// let nums = [2, 4, 0, 8, 10];
+let nums = [2, 4, 0, 8, 10];
 // 31. Agrega el número 12 al final del array.
 // nums.push(12)
 // console.log(nums)
@@ -149,7 +137,9 @@ console.log(valoresPares)
 // let allNums = nums.filter( n => n > 5)
 // console.log(allNums)
 // 40. Muestra cada número multiplicado por 2.
-
+// nums.forEach(n => {
+//     console.log(n * 2); // Muestra cada número multiplicado por 2
+// });
 // 41. Crea un nuevo array con cada número duplicado.
 // let doble = nums.map( n => n * 2)
 // console.log(doble)
